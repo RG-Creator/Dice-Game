@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+#GAME{
+    background-color: #11468F;
+}
+.header-text{
+    font-size: 6.5rem;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    color: black;
+    text-decoration: none;
+    display: flexbox;
+}
+.header-text:hover{
+    color: black;
+    transform: scale(1.1);
+    transition: 1s;
+}
+.footer-text{
+    margin-top: 6%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+h2{
+    font-family: 'Oswald', sans-serif;  
+    padding-bottom: 2%;
+}
+h2:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.dice-img{
+    height: 60%;
+}

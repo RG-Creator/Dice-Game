@@ -1,3 +1,5 @@
+function play()
+{
 var dice1=Math.floor(Math.random()*6)+1;
 var dice2=Math.floor(Math.random()*6)+1;
 document.querySelectorAll("img")[0].setAttribute("src","images/dice"+dice1+".png");
@@ -16,4 +18,6 @@ else
 {
     document.querySelector("h1").innerHTML="Player 2 Wins! 🚩";
 }
-
+document.querySelector("h1").setAttribute("onclick","location.reload()")
+setTimeout("window.location.reload(true)",3000);
+}

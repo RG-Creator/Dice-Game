@@ -2,33 +2,106 @@
     margin: 0;
     padding: 0;
     font-family: 'Indie Flower', cursive;
+    font-family: 'Bebas Neue', cursive;
     font-family: 'Oswald', sans-serif;
     font-family: 'Tiro Devanagari Sanskrit', serif;
 }
-#GAME{
-    background-color: #11468F;
+
+
+/* -----------------PRELOADER-------------- */
+#PRELOADER{
+    background: black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+}
+#PRELOADER .loader-img{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    height: 300px;
+}
+.hide{
+    z-index: 100;
+    top: 5%;
+    left: 33%;
+    visibility: hidden;
+    position: absolute;
+}
+
+#lin-grad{
+    /* background-image: linear-gradient(135deg, white, lightgreen, darkblue); */
+    background-color: #2f4353;
+    background-image: linear-gradient(315deg, #d2ccc4 0%, #2f4353 74%);
+    height: 100%;
+    width: 100vw;
 }
 .header-text{
     font-size: 6.5rem;
-    padding-top: 4%;
-    padding-bottom: 4%;
     font-family: 'Tiro Devanagari Sanskrit', serif;
     color: black;
-    text-decoration: none;
-    display: flexbox;
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    width: 80%;
 }
 .header-text:hover{
-    color: black;
+    color: white;
+    /* font-family: 'Indie Flower', cursive; */
     transform: scale(1.1);
     transition: 1s;
 }
+.header-text1{
+    font-size: 6.5rem;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    color: black;
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    width: 80%;
+}
+.header-text1:hover{
+    color: white;
+    /* font-family: 'Indie Flower', cursive; */
+    transform: scale(1.1);
+}
+#GAME .dice-col{
+    padding-top: 16%;
+}
+.navbar{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#NAVIGATION-BAR .nav-link{
+    padding-right: 30px;
+    padding-top: 30px;
+    font-family: 'Bebas Neue', cursive;
+
+}
+.modal-title{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size:2rem;
+    width: 100%;
+}
+.modal-text{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+}
+.modal-footer-btn{
+    font-family: 'Bebas Neue', cursive;
+    width: 100%;
+    font-size: 1.5rem;
+}
 .footer-text{
-    margin-top: 6%;
+    margin-top: 3%;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
 }
 h2{
-    font-family: 'Oswald', sans-serif;  
+    font-family: 'Bebas Neue', cursive;
     padding-bottom: 2%;
 }
 h2:hover{
@@ -38,3 +111,262 @@ h2:hover{
 .dice-img{
     height: 60%;
 }
+
+@media (min-width: 1030px) and (max-width: 1450px) {
+    .header-text , .header-text1{
+        font-size: 6rem;
+    }
+    #GAME .dice-col{
+        padding-top: 12%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.8rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.3rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 990px) and (max-width: 1030px) {
+    #PRELOADER .loader-img{
+        top: 22%;
+        left: 27%;
+    }
+    .hide{
+        left: 30%;
+    }
+    .header-text , .header-text1{
+        font-size: 5.5rem;
+    }
+    #GAME .dice-col{
+        padding-top: 20%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.7rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.3rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.7rem;
+    }
+}
+@media (min-width: 770px) and (max-width: 990px) {
+    #PRELOADER .loader-img{
+        top: 22%;
+        left: 15%;
+    }
+    .hide{
+        left: 30%;
+    }
+    .header-text , .header-text1{
+        font-size: 4rem;
+    }
+    #GAME .dice-col{
+        padding-top: 25%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .dice-img{
+        height: 50%;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.6rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.2rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+}
+@media (min-width: 500px) and (max-width: 770px) {
+    #PRELOADER .loader-img{
+        top: 22%;
+        left: 15%;
+    }
+    .hide{
+        left: 30%;
+    }
+    .header-text , .header-text1{
+        font-size: 4rem;
+    }
+    #GAME .dice-col{
+        padding-top: 25%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .dice-img{
+        height: 50%;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.5rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.1rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
+/* @media (min-width: 4px) and (max-width: 575px) {
+    #PRELOADER .loader-img{
+        top: 20%;
+        left: 23%;
+    }
+    /* .hide{
+        left: 30%;
+    } */
+    /* #NAVIGATION-BAR{
+        position: absolute;
+    }
+    .header-text , .header-text1{
+        font-size: 5rem;
+    }
+    #GAME .dice-col{
+        padding-top: 35%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.3rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+} */ 
+@media (min-width: 320px) and (max-width: 500px) {
+    #PRELOADER .loader-img{
+        top: 30%;
+        left: 10%;
+        height: 200px;
+    }
+    .hide{
+        top: 10%;
+        height: 400px;
+        left: 0;
+    }
+    #NAVIGATION-BAR{
+        position: absolute;
+    }
+    .header-text{
+        font-size: 4rem;
+    }
+    .header-text1{
+        font-size: 2.5rem;
+    }
+    #GAME .dice-col{
+        padding-top: 50%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .dice-img{
+        height: 40%;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.2rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 0.8rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 100px) and (max-width: 320px) {
+    #PRELOADER .loader-img{
+        top: 30%;
+        left: 0%;
+        height: 200px;
+    }
+    .hide{
+        top: 10%;
+        height: 350px;
+        left: 0;
+    }
+    #NAVIGATION-BAR{
+        position: absolute;
+    }
+    .header-text{
+        font-size: 2.5rem;
+    }
+    .header-text1{
+        font-size: 2rem;
+    }
+    #GAME .dice-col{
+        padding-top: 50%;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .dice-img{
+        height: 40%;
+    }
+    .modal-title{
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        font-size:1.2rem;
+        width: 100%;
+    }
+    .modal-text{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 0.8rem;
+    }
+    .modal-footer-btn{
+        font-family: 'Bebas Neue', cursive;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+

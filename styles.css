@@ -1,372 +1,285 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+body{
     margin: 0;
     padding: 0;
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Bebas Neue', cursive;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Reenie Beanie', cursive;
+    font-family: 'Square Peg', cursive;
 }
+/* ---------------------PRELOADER------------------------- */
 
-
-/* -----------------PRELOADER-------------- */
 #PRELOADER{
     background: black;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    z-index: 10;
-}
-#PRELOADER .loader-img{
-    position: absolute;
-    top: 25%;
-    left: 35%;
-    height: 300px;
-}
-.hide{
-    z-index: 100;
-    top: 5%;
-    left: 33%;
-    visibility: hidden;
-    position: absolute;
-}
-
-#lin-grad{
-    /* background-image: linear-gradient(135deg, white, lightgreen, darkblue); */
-    background-color: #2f4353;
-    background-image: linear-gradient(315deg, #d2ccc4 0%, #2f4353 74%);
     height: 100%;
-    width: 100vw;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
-.header-text{
-    font-size: 6.5rem;
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    color: black;
-    position: absolute;
-    top: 13%;
-    left: 10%;
-    width: 80%;
+#PRELOADER h1{
+    position: absolute;  
 }
-.header-text:hover{
+#PRELOADER .loader1{
+    top: 42%;
+    left: 44%;
+    font-family: 'Caveat', cursive;
+    animation: mover 1s infinite alternate;
     color: white;
-    /* font-family: 'Indie Flower', cursive; */
-    transform: scale(1.1);
-    transition: 1s;
 }
-.header-text1{
-    font-size: 6.5rem;
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    color: black;
-    position: absolute;
-    top: 13%;
-    left: 10%;
-    width: 80%;
+#PRELOADER .loader2{
+    top: 42%;
+    left: 50%;
+    font-family: 'Caveat', cursive;
+    animation: mover 1s infinite alternate-reverse;
+    color: grey;
 }
-.header-text1:hover{
-    color: white;
-    /* font-family: 'Indie Flower', cursive; */
-    transform: scale(1.1);
+@media (max-width:330px ){
+    #PRELOADER .loader1{
+        left: 34%;
+    }
+    #PRELOADER .loader2{
+        left: 52%;
+    }
 }
-#GAME .dice-col{
-    padding-top: 16%;
+@media (min-width:330px) and (max-width:380px){
+    #PRELOADER .loader1{
+        left: 36%;
+    }
+    #PRELOADER .loader2{
+        left: 52%;
+    }
 }
-.navbar{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
-    font-weight: 700;
+@media (min-width:380px) and (max-width:430px){
+    #PRELOADER .loader1{
+        left: 37%;
+    }
+    #PRELOADER .loader2{
+        left: 51%;
+    }
 }
-#NAVIGATION-BAR .nav-link{
-    padding-right: 30px;
-    padding-top: 30px;
-    font-family: 'Bebas Neue', cursive;
+@media (min-width:430px ) and (max-width:580px){
+    #PRELOADER .loader1{
+        left: 38%;
+    }
+    #PRELOADER .loader2{
+        left: 51%;
+    }
+}
+@media (min-width:580px ) and (max-width:770px){
+    #PRELOADER .loader1{
+        left: 40%;
+    }
+    #PRELOADER .loader2{
+        left: 50%;
+    }
+}
+@media (min-width:770px ) and (max-width:1030px){
+    #PRELOADER .loader1{
+        left: 41%;
+    }
+    #PRELOADER .loader2{
+        left: 49%;
+    }
+}
+@media (min-width:1030px ) and (max-width:1450px){
+    #PRELOADER .loader1{
+        left: 42%;
+    }
+    #PRELOADER .loader2{
+        left: 48%;
+    }
+}
+@media (min-width:1770px ) and (max-width:2580px){
+    #PRELOADER .loader1{
+        left: 43%;
+    }
+    #PRELOADER .loader2{
+        left: 48%;
+    }
+}
+@keyframes mover {
+    0% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(5px);
+    }
+  }
 
+/* ---------------------PRELOADER------------------------- */
+
+/*---------------------- HEADER SECTION-------------------- */
+#HEADER .navbar{
+    padding: 0;
 }
-.modal-title{
-    font-family: 'Bebas Neue', cursive;
+#HEADER .container-fluid{
+    background: url(images/back1.jpg);
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: fill;
+    margin: 0;
+    padding: 0 1%;
+}
+div .head-col{
+    padding: 0;
+    margin: 0;
+}
+.header-back-img{
+    width: 100%;
+}
+#HEADER .navbar{
+    z-index: 1;
+}
+#HEADER .container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.intro-title{
     text-align: center;
-    font-size:2rem;
+    font-family: 'Caveat', cursive;
+    font-size: 5rem;
     width: 100%;
-}
-.modal-text{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 1.5rem;
-}
-.modal-footer-btn{
-    font-family: 'Bebas Neue', cursive;
-    width: 100%;
-    font-size: 1.5rem;
-}
-.footer-text{
-    margin-top: 3%;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-}
-h2{
-    font-family: 'Bebas Neue', cursive;
-    padding-bottom: 2%;
-}
-h2:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-.dice-img{
-    height: 60%;
+
 }
 
-@media (min-width: 1030px) and (max-width: 1450px) {
-    .header-text , .header-text1{
-        font-size: 6rem;
+.intro-text{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Reenie Beanie', cursive;
+    width: 100%;
+
+}
+
+@media (min-width: 100px) and (max-width: 310px) {
+    #HEADER .nav-link{
+        text-align: left;
+        padding-left: 5%;
     }
-    #GAME .dice-col{
-        padding-top: 12%;
+    #HEADER .intro-title{
+        font-size: 2.5rem;
+        margin-top: 5%;
     }
-    .footer-text{
-        margin-top: 0;
-    }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.8rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
+    #HEADER .intro-text{
         font-size: 1.3rem;
     }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.8rem;
+}
+@media (min-width: 310px)  and (max-width: 430px) {
+    #HEADER .nav-link{
+        text-align: left;
+        padding-left: 5%;
+    }
+    #HEADER .intro-title{
+        font-size: 3.5rem;
+        margin-top: 5%;
+    }
+    #HEADER .intro-text{
+        font-size: 1.75rem;
     }
 }
-@media (min-width: 990px) and (max-width: 1030px) {
-    #PRELOADER .loader-img{
-        top: 22%;
-        left: 27%;
+@media (min-width: 430px)  and (max-width: 770px) {
+    /* #HEADER .nav-link{
+        text-align: left;
+        padding-left: 5%;
+    } */
+    #HEADER .navbar{
+        /* margin-top: 5%; */
+        /* margin-left: 5%; */
     }
-    .hide{
-        left: 30%;
-    }
-    .header-text , .header-text1{
-        font-size: 5.5rem;
-    }
-    #GAME .dice-col{
-        padding-top: 20%;
-    }
-    .footer-text{
-        margin-top: 0;
-    }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.7rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.3rem;
-    }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.7rem;
-    }
-}
-@media (min-width: 770px) and (max-width: 990px) {
-    #PRELOADER .loader-img{
-        top: 22%;
-        left: 15%;
-    }
-    .hide{
-        left: 30%;
-    }
-    .header-text , .header-text1{
+    #HEADER .intro-title{
         font-size: 4rem;
+        margin-top: 10%;
+        /* margin-left: 5%; */
     }
-    #GAME .dice-col{
-        padding-top: 25%;
-    }
-    .footer-text{
-        margin-top: 0;
-    }
-    .dice-img{
-        height: 50%;
-    }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.6rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.2rem;
-    }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.6rem;
-    }
+    #HEADER .intro-text{
+        font-size: 2rem;
+        margin-top: 5%;
+        /* margin-left: 5%; */
+    } 
 }
-@media (min-width: 500px) and (max-width: 770px) {
-    #PRELOADER .loader-img{
-        top: 22%;
-        left: 15%;
+@media (min-width: 770px)  and (max-width: 1030px) {
+    #HEADER .navbar{
+        margin-top: 8%;
     }
-    .hide{
-        left: 30%;
-    }
-    .header-text , .header-text1{
-        font-size: 4rem;
-    }
-    #GAME .dice-col{
-        padding-top: 25%;
-    }
-    .footer-text{
-        margin-top: 0;
-    }
-    .dice-img{
-        height: 50%;
-    }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.5rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
+    #HEADER .nav-link{
         font-size: 1.1rem;
     }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.5rem;
+    #HEADER .intro-title{
+        font-size: 4.5rem;
+        margin-top: 10%;
     }
+    #HEADER .intro-text{
+        font-size: 2.25rem;
+        margin-top: 5%;
+    }    
 }
-/* @media (min-width: 4px) and (max-width: 575px) {
-    #PRELOADER .loader-img{
-        top: 20%;
-        left: 23%;
+@media (min-width: 1030px)  and (max-width: 1450px) {
+    #HEADER .navbar{
+        margin-top: 6%;
     }
-    /* .hide{
-        left: 30%;
-    } */
-    /* #NAVIGATION-BAR{
-        position: absolute;
-    }
-    .header-text , .header-text1{
-        font-size: 5rem;
-    }
-    #GAME .dice-col{
-        padding-top: 35%;
-    }
-    .footer-text{
-        margin-top: 0;
-    }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.3rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
+    #HEADER .nav-link{
         font-size: 1rem;
     }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.3rem;
+    #HEADER .nav-link:hover{
+        transition: 1s;
+        color: black;
+        transform: scale(1.1);    
     }
-} */ 
-@media (min-width: 320px) and (max-width: 500px) {
-    #PRELOADER .loader-img{
-        top: 30%;
-        left: 10%;
-        height: 200px;
+    #HEADER .intro-title{
+        font-size: 5rem;
+        margin-top: 10%;
     }
-    .hide{
-        top: 10%;
-        height: 400px;
-        left: 0;
-    }
-    #NAVIGATION-BAR{
-        position: absolute;
-    }
-    .header-text{
-        font-size: 4rem;
-    }
-    .header-text1{
+    #HEADER .intro-text{
         font-size: 2.5rem;
-    }
-    #GAME .dice-col{
-        padding-top: 50%;
-    }
-    .footer-text{
-        margin-top: 0;
-    }
-    .dice-img{
-        height: 40%;
-    }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.2rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 0.8rem;
-    }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.2rem;
-    }
+        margin-top: 5%;
+    }    
 }
-@media (min-width: 100px) and (max-width: 320px) {
-    #PRELOADER .loader-img{
-        top: 30%;
-        left: 0%;
-        height: 200px;
+@media (min-width: 1450px)  and (max-width: 1770px) {
+    #HEADER .navbar{
+        margin-top: 8%;
     }
-    .hide{
-        top: 10%;
-        height: 350px;
-        left: 0;
+    #HEADER .nav-link{
+        font-size: 1.1rem;
     }
-    #NAVIGATION-BAR{
-        position: absolute;
+    #HEADER .nav-link:hover{
+        transition: 1s;
+        color: black;
+        transform: scale(1.1);    
     }
-    .header-text{
-        font-size: 2.5rem;
+    #HEADER .intro-title{
+        font-size: 6rem;
+        margin-top: 10%;
     }
-    .header-text1{
-        font-size: 2rem;
+    #HEADER .intro-text{
+        font-size: 3rem;
+        margin-top: 5%;
+    }    
+}
+@media (min-width: 1770px){
+    #HEADER .navbar{
+        margin-top: 7%;
     }
-    #GAME .dice-col{
-        padding-top: 50%;
+    #HEADER .nav-link{
+        font-size: 1.4rem;
     }
-    .footer-text{
-        margin-top: 0;
+    #HEADER .nav-link:hover{
+        transition: 1s;
+        color: black;
+        transform: scale(1.1);    
     }
-    .dice-img{
-        height: 40%;
+    #HEADER .intro-title{
+        font-size: 9rem;
+        margin-top: 10%;
     }
-    .modal-title{
-        font-family: 'Bebas Neue', cursive;
-        text-align: center;
-        font-size:1.2rem;
-        width: 100%;
-    }
-    .modal-text{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 0.8rem;
-    }
-    .modal-footer-btn{
-        font-family: 'Bebas Neue', cursive;
-        width: 100%;
-        font-size: 1.2rem;
-    }
+    #HEADER .intro-text{
+        font-size: 4.5rem;
+        margin-top: 5%;
+    }    
 }
 
+
+
+
+/*---------------------- HEADER SECTION-------------------- */
